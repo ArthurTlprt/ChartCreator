@@ -20,15 +20,13 @@ int main(int argc, char** argv) {
     
     //usleep(1000000);   // 1 seconds = 1000000 microseconds
     
-    for (int i = 1; i < 2; i++) 
-    {
-      disc0.setColor(i*255, 0, 0);
-      disc0.setCenter(Point3D(400*i, 300, 0));
+
+      disc0.setColor(200, 100, 0);
+      disc0.setCenter(Point3D(400, 300, 0));
       win->draw(disc0);
       usleep(50000);  
-    }
     
-    usleep(10000000);  
+    usleep(100000000);  
     
     MyWindow::destroyWindow();
     return 0;

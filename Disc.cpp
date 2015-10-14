@@ -38,15 +38,18 @@ void Disc::setCenter(const Point3D & c) {
 void Disc::draw(MyWindow* win) const {
     for (int i = -radius; i <= radius; i++) {
         for (int j = -radius; j <= radius; j++) {
-            if ((i * i + j * j) <= (radius * radius) && !(i >0 && j > 0)) {
-                //cout << "(" << i << ";" << j << ")" << endl;
-                win->putPixel(center.getX() + i, center.getY() + j, getColor().r, getColor().g, getColor().b);
-            }
-            else if((i * i + j * j) <= (radius * radius) && i >0 && j > 0){
-                win->putPixel(center.getX() + i, center.getY() + j,0 ,0 , 250);
-            }
-            else{
-                 win->putPixel(center.getX() + i, center.getY() + j, 0, 100, 100);
+            if((i * i + j * j) <= (radius * radius)){
+                /*if( i >0  && j < 0){
+                    win->putPixel(center.getX() + i, center.getY() + j,0 ,100 , 200);
+                }*/
+                Point3D A(center.getX(), center.getY(), 0);
+                Point3D B(radius, 0, 0); 
+                Point3D C(radius*cos(M_PI/4), radius* sin(M_PI/4), 0);
+                for(int k = 0; k <= sin(M_PI/4); k++){
+                    if(i == radius*cos(M_PI/4) && j == radius*sin(M_PI/4) - k){
+                        win->putPixel(center.getX() + i, center.getY() + j,255 ,255 , 255);
+                    }
+                }
             }
         }
     }

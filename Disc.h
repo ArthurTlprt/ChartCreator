@@ -5,6 +5,7 @@ class Point3D;
 
 #include "Point3D.h"
 #include "Shape.h"
+#include "math.h"
 
 class Disc : public Shape{
 private:
@@ -23,6 +24,7 @@ public:
 
     // shape part
     void draw(MyWindow*) const;
+    void drawTriangle(Point3D A, Point3D B, Point3D C);
     float getArea();
     
     ~Disc();
