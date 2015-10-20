@@ -4,10 +4,17 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>BarGraph1.h</itemPath>
+      <itemPath>BarGraph2.h</itemPath>
+      <itemPath>BarGraph3.h</itemPath>
+      <itemPath>Chart.h</itemPath>
       <itemPath>Color.h</itemPath>
       <itemPath>Disc.h</itemPath>
+      <itemPath>LineGraph.h</itemPath>
       <itemPath>MyDrawable.h</itemPath>
       <itemPath>MyWindow.h</itemPath>
+      <itemPath>PieChart1.h</itemPath>
+      <itemPath>PieChart2.h</itemPath>
       <itemPath>Point3D.h</itemPath>
       <itemPath>Rectangle.h</itemPath>
       <itemPath>Shape.h</itemPath>
@@ -19,9 +26,16 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>BarGraph1.cpp</itemPath>
+      <itemPath>BarGraph2.cpp</itemPath>
+      <itemPath>BarGraph3.cpp</itemPath>
+      <itemPath>Chart.cpp</itemPath>
       <itemPath>Disc.cpp</itemPath>
+      <itemPath>LineGraph.cpp</itemPath>
       <itemPath>MyDrawable.cpp</itemPath>
       <itemPath>MyWindow.cpp</itemPath>
+      <itemPath>PieChart1.cpp</itemPath>
+      <itemPath>PieChart2.cpp</itemPath>
       <itemPath>Point3D.cpp</itemPath>
       <itemPath>Rectangle.cpp</itemPath>
       <itemPath>Shape.cpp</itemPath>
@@ -54,11 +68,31 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
+      <item path="BarGraph1.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BarGraph1.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BarGraph2.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BarGraph2.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BarGraph3.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BarGraph3.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Chart.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Chart.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Color.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Disc.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Disc.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LineGraph.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LineGraph.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="MyDrawable.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -67,6 +101,14 @@
       <item path="MyWindow.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="MyWindow.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PieChart1.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PieChart1.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PieChart2.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PieChart2.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Point3D.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -103,11 +145,31 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="BarGraph1.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BarGraph1.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BarGraph2.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BarGraph2.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BarGraph3.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BarGraph3.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Chart.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Chart.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Color.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Disc.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Disc.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LineGraph.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LineGraph.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="MyDrawable.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -116,6 +178,14 @@
       <item path="MyWindow.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="MyWindow.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PieChart1.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PieChart1.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PieChart2.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PieChart2.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Point3D.cpp" ex="false" tool="1" flavor2="0">
       </item>

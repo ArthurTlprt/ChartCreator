@@ -35,9 +35,16 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/BarGraph1.o \
+	${OBJECTDIR}/BarGraph2.o \
+	${OBJECTDIR}/BarGraph3.o \
+	${OBJECTDIR}/Chart.o \
 	${OBJECTDIR}/Disc.o \
+	${OBJECTDIR}/LineGraph.o \
 	${OBJECTDIR}/MyDrawable.o \
 	${OBJECTDIR}/MyWindow.o \
+	${OBJECTDIR}/PieChart1.o \
+	${OBJECTDIR}/PieChart2.o \
 	${OBJECTDIR}/Point3D.o \
 	${OBJECTDIR}/Rectangle.o \
 	${OBJECTDIR}/Shape.o \
@@ -68,10 +75,35 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/chartcreator: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/chartcreator ${OBJECTFILES} ${LDLIBSOPTIONS}
 
+${OBJECTDIR}/BarGraph1.o: BarGraph1.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/BarGraph1.o BarGraph1.cpp
+
+${OBJECTDIR}/BarGraph2.o: BarGraph2.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/BarGraph2.o BarGraph2.cpp
+
+${OBJECTDIR}/BarGraph3.o: BarGraph3.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/BarGraph3.o BarGraph3.cpp
+
+${OBJECTDIR}/Chart.o: Chart.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Chart.o Chart.cpp
+
 ${OBJECTDIR}/Disc.o: Disc.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Disc.o Disc.cpp
+
+${OBJECTDIR}/LineGraph.o: LineGraph.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/LineGraph.o LineGraph.cpp
 
 ${OBJECTDIR}/MyDrawable.o: MyDrawable.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -82,6 +114,16 @@ ${OBJECTDIR}/MyWindow.o: MyWindow.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MyWindow.o MyWindow.cpp
+
+${OBJECTDIR}/PieChart1.o: PieChart1.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/PieChart1.o PieChart1.cpp
+
+${OBJECTDIR}/PieChart2.o: PieChart2.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/PieChart2.o PieChart2.cpp
 
 ${OBJECTDIR}/Point3D.o: Point3D.cpp 
 	${MKDIR} -p ${OBJECTDIR}

@@ -25,12 +25,7 @@ int main(int argc, char** argv) {
     win->draw(disc0);
    */
     
-    Rectangle rect0(60, 200);
-    rect0.setBotLeftCorner(Point3D(400, 300, 0));
-    rect0.setColor(255, 0, 0);
-    win->draw(rect0);
     
-     
     
     usleep(10000000);  
     
