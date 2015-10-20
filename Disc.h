@@ -24,6 +24,7 @@ public:
 
     // shape part
     void draw(MyWindow*) const;
+    void drawTriangle(Point3D A, Point3D B, Point3D C);
     float getArea();
     
     ~Disc();
