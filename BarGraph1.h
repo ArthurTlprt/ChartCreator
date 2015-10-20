@@ -10,6 +10,7 @@
 
 #include "Point3D.h"
 #include "Chart.h"
+#include "MyWindow.h"
 
 class BarGraph1: public Chart {
 public:
@@ -22,7 +23,7 @@ public:
     float GetWidth() const;
     void SetBotLeftCorner(Point3D botLeftCorner);
     Point3D GetBotLeftCorner() const;
-    void draw();
+    void draw(MyWindow* win);
 private:
     Point3D botLeftCorner;
     float width;

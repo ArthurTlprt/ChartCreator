@@ -43,14 +43,15 @@ void BarGraph1::SetBotLeftCorner(Point3D botLeftCorner) {
 Point3D BarGraph1::GetBotLeftCorner() const {
     return botLeftCorner;
 }
-void BarGraph1::draw() {
+void BarGraph1::draw(MyWindow* win) {
     int n = 5; // number of rectangle
     float tab[5] = {70, 45, 80, 12, 66};
     float width = this->width/n;
     for(int i = 0; i < n; i++){
         Rectangle rect(width, this->height*(tab[i]/100));
-        rect.setBotLeftCorner(Point3D(this->GetBotLeftCorner().getX()*i, this->GetBotLeftCorner().getX(), 0));
-        rect.setColor(i*10, i*10, 0);
+        rect.setBotLeftCorner(Point3D(this->GetBotLeftCorner().getX()+(width*i) , this->GetBotLeftCorner().getX(), 0));
+        rect.setColor(i*21,255-(i*21), i*21);
+        win->draw(rect);
     }
 }
 
