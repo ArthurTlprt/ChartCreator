@@ -39,6 +39,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/MyDrawable.o \
 	${OBJECTDIR}/MyWindow.o \
 	${OBJECTDIR}/Point3D.o \
+	${OBJECTDIR}/Rectangle.o \
 	${OBJECTDIR}/Shape.o \
 	${OBJECTDIR}/main.o
 
@@ -86,6 +87,11 @@ ${OBJECTDIR}/Point3D.o: Point3D.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Point3D.o Point3D.cpp
+
+${OBJECTDIR}/Rectangle.o: Rectangle.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Rectangle.o Rectangle.cpp
 
 ${OBJECTDIR}/Shape.o: Shape.cpp 
 	${MKDIR} -p ${OBJECTDIR}

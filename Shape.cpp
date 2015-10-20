@@ -23,7 +23,9 @@ Shape::Shape(const Shape & s) : MyDrawable(s), id(s.id) {
 void Shape::draw(MyWindow*) const{
     
 }
-
+void Shape::print() {
+    cout << "ID     : " << id << endl;
+}
 float Shape::getArea() {
     return 0;
 }

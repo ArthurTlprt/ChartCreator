@@ -14,6 +14,7 @@ public:
     Shape(const Color&);
     Shape(const Shape &);
 
+    virtual void print();
     virtual float getArea() = 0;
     virtual void draw(MyWindow*) const = 0;
 
@@ -21,4 +22,3 @@ public:
 };
 
 #endif	/* SHAPE_H */
-
