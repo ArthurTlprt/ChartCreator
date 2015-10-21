@@ -8,13 +8,18 @@
 #ifndef CHART_H
 #define	CHART_H
 
+#include <vector>
+#include "Data1.h"
+
 class Chart {
 public:
     Chart();
     Chart(const Chart& orig);
     virtual ~Chart();
-private:
-    
+    void add(Data1 * data);
+    int size();
+protected:
+    std::vector<Data1*>tableau;
 };
 
 #endif	/* CHART_H */

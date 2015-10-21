@@ -28,7 +28,7 @@ int main(int argc, char** argv) {
     
     BarGraph1 graph0(400, 600, Point3D(600, 600, 0));
     graph0.draw(win);
-    
+ 
     usleep(100000000);  
     
     MyWindow::destroyWindow();

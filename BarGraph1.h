@@ -11,6 +11,10 @@
 #include "Point3D.h"
 #include "Chart.h"
 #include "MyWindow.h"
+#include <vector>
+#include "Data1.h"
+
+using namespace std;
 
 class BarGraph1: public Chart {
 public:

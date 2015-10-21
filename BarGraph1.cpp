@@ -8,7 +8,8 @@
 #include "BarGraph1.h"
 #include "Rectangle.h"
 
-BarGraph1::BarGraph1(float width, float height, Point3D botLeftCorner) {
+BarGraph1::BarGraph1(float width, float height, Point3D botLeftCorner){
+    
     this->width = width;
     this->height = height;
     this->botLeftCorner = botLeftCorner;
@@ -44,13 +45,12 @@ Point3D BarGraph1::GetBotLeftCorner() const {
     return botLeftCorner;
 }
 void BarGraph1::draw(MyWindow* win) {
-    int n = 5; // number of rectangle
-    float tab[5] = {70, 45, 80, 12, 66};
+    int n = Chart::size();
     float width = this->width/n;
     for(int i = 0; i < n; i++){
-        Rectangle rect(width, this->height*(tab[i]/100));
+        Rectangle rect(width, this->height*(tableau[i]->GetPrct()/100));
         rect.setBotLeftCorner(Point3D(this->GetBotLeftCorner().getX()+(width*i) , this->GetBotLeftCorner().getX(), 0));
-        rect.setColor(i*21,255-(i*21), i*21);
+        rect.setColor(tableau[i]->GetColor());
         win->draw(rect);
     }
 }

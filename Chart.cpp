@@ -16,3 +16,9 @@ Chart::Chart(const Chart& orig) {
 Chart::~Chart() {
 }
 
+void Chart::add(Data1* data) {
+    tableau.push_back(data);
+}
+int Chart::size() {
+    return tableau.size();
+}
