@@ -18,6 +18,7 @@ public:
     virtual ~Chart();
     void add(Data1 * data);
     int size();
+    Data1* getDataByN(int n);
 protected:
     std::vector<Data1*>tableau;
 };

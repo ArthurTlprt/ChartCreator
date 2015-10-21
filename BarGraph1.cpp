@@ -48,9 +48,10 @@ void BarGraph1::draw(MyWindow* win) {
     int n = Chart::size();
     float width = this->width/n;
     for(int i = 0; i < n; i++){
-        Rectangle rect(width, this->height*(tableau[i]->GetPrct()/100));
+        Data1* data = getDataByN(i);
+        Rectangle rect(width, this->height*( data->GetPrct() ));
         rect.setBotLeftCorner(Point3D(this->GetBotLeftCorner().getX()+(width*i) , this->GetBotLeftCorner().getX(), 0));
-        rect.setColor(tableau[i]->GetColor());
+        rect.setColor( data->GetColor() );
         win->draw(rect);
     }
 }
