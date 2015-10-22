@@ -18,7 +18,6 @@ public:
     virtual ~Chart();
     void add(Data1 * data);
     int size();
-    Data1* getDataByN(int n);
 protected:
     vector<Data1*>tableau;
 };

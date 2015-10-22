@@ -46,9 +46,10 @@ Point3D BarGraph1::GetBotLeftCorner() const {
 }
 void BarGraph1::draw(MyWindow* win) {
     int n = Chart::size();
+    cout << n << endl;
     float width = this->width/n;
     for(int i = 0; i < n; i++){
-        Data1* data = getDataByN(i);
+        Data1* data = tableau[i];
         Rectangle rect(width, this->height*( data->GetPrct() ));
         rect.setBotLeftCorner(Point3D(this->GetBotLeftCorner().getX()+(width*i) , this->GetBotLeftCorner().getX(), 0));
         rect.setColor( data->GetColor() );

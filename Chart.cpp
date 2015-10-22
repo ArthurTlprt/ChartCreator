@@ -28,8 +28,3 @@ void Chart::add(Data1 * data) {
 int Chart::size() {
     return tableau.size();
 }
-
-Data1* Chart::getDataByN(int n) {
-    return tableau[n];
-}
-

@@ -41,7 +41,7 @@ int main(int argc, char** argv) {
     graph0.add(data1);
     graph0.add(data2);
     
-    //graph0.draw(win);
+    graph0.draw(win);
  
     usleep(10000000);  
     
