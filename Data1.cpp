@@ -7,7 +7,9 @@
 
 #include "Data1.h"
 
-Data1::Data1() {
+Data1::Data1(float prct, const Color& color) {
+    this->prct = prct;
+    this->color.setColor(color);
 }
 
 Data1::Data1(const Data1& orig) {
@@ -16,8 +18,8 @@ Data1::Data1(const Data1& orig) {
 Data1::~Data1() {
 }
 
-void Data1::SetColor(Color color) {
-    this->color = color;
+void Data1::SetColor(const Color& color) {
+    this->color.setColor(color);
 }
 
 Color Data1::GetColor() const {

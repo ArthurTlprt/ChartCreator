@@ -10,7 +10,11 @@
 #include "Disc.h"
 #include "Rectangle.h"
 #include "BarGraph1.h"
+#include "Data1.h"
 #include <unistd.h>
+#include <iostream>
+
+using namespace std;
 
 
 int main(int argc, char** argv) {
@@ -26,10 +30,20 @@ int main(int argc, char** argv) {
     win->draw(disc0);
    */
     
+    
     BarGraph1 graph0(400, 600, Point3D(600, 600, 0));
-    graph0.draw(win);
+    
+    Data1* data0 = new Data1(75, Color(100, 100, 100));
+    Data1* data1 = new Data1(15, Color(100, 0, 255));
+    Data1* data2 = new Data1(100, Color(255, 100, 100));
+    
+    graph0.add(data0);
+    graph0.add(data1);
+    graph0.add(data2);
+    
+    //graph0.draw(win);
  
-    usleep(100000000);  
+    usleep(10000000);  
     
     MyWindow::destroyWindow();
     return 0;

@@ -9,6 +9,7 @@
       <itemPath>BarGraph3.h</itemPath>
       <itemPath>Chart.h</itemPath>
       <itemPath>Color.h</itemPath>
+      <itemPath>Data1.h</itemPath>
       <itemPath>Disc.h</itemPath>
       <itemPath>LineGraph.h</itemPath>
       <itemPath>MyDrawable.h</itemPath>
@@ -30,6 +31,7 @@
       <itemPath>BarGraph2.cpp</itemPath>
       <itemPath>BarGraph3.cpp</itemPath>
       <itemPath>Chart.cpp</itemPath>
+      <itemPath>Data1.cpp</itemPath>
       <itemPath>Disc.cpp</itemPath>
       <itemPath>LineGraph.cpp</itemPath>
       <itemPath>MyDrawable.cpp</itemPath>

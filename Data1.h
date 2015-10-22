@@ -12,10 +12,10 @@
 
 class Data1 {
 public:
-    Data1();
+    Data1(float prct, const Color& color);
     Data1(const Data1& orig);
     virtual ~Data1();
-    void SetColor(Color color);
+    void SetColor(const Color& color);
     Color GetColor() const;
     void SetPrct(float prct);
     float GetPrct() const;

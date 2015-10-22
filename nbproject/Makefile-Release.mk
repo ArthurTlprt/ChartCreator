@@ -39,6 +39,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/BarGraph2.o \
 	${OBJECTDIR}/BarGraph3.o \
 	${OBJECTDIR}/Chart.o \
+	${OBJECTDIR}/Data1.o \
 	${OBJECTDIR}/Disc.o \
 	${OBJECTDIR}/LineGraph.o \
 	${OBJECTDIR}/MyDrawable.o \
@@ -94,6 +95,11 @@ ${OBJECTDIR}/Chart.o: Chart.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Chart.o Chart.cpp
+
+${OBJECTDIR}/Data1.o: Data1.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Data1.o Data1.cpp
 
 ${OBJECTDIR}/Disc.o: Disc.cpp 
 	${MKDIR} -p ${OBJECTDIR}

@@ -20,7 +20,7 @@ public:
     int size();
     Data1* getDataByN(int n);
 protected:
-    std::vector<Data1*>tableau;
+    vector<Data1*>tableau;
 };
 
 #endif	/* CHART_H */

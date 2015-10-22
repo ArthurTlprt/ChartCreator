@@ -12,7 +12,7 @@
 #include "Chart.h"
 #include "MyWindow.h"
 #include <vector>
-#include "Data1.h"
+//#include "Data1.h"
 
 using namespace std;
 
