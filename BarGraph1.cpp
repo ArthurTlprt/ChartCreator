@@ -32,15 +32,12 @@ float BarGraph1::GetHeight() const {
 void BarGraph1::SetWidth(float width) {
     this->width = width;
 }
-
 float BarGraph1::GetWidth() const {
     return width;
 }
-
 void BarGraph1::SetBotLeftCorner(Point3D botLeftCorner) {
     this->botLeftCorner = botLeftCorner;
 }
-
 Point3D BarGraph1::GetBotLeftCorner() const {
     return botLeftCorner;
 }
@@ -49,11 +46,15 @@ void BarGraph1::draw(MyWindow* win) {
     cout << n << endl;
     float width = this->width/n;
     for(int i = 0; i < n; i++){
+        
         Data1* data = tableau[i];
-        Rectangle rect(width, this->height*( data->GetPrct() ));
-        rect.setBotLeftCorner(Point3D(this->GetBotLeftCorner().getX()+(width*i) , this->GetBotLeftCorner().getX(), 0));
-        rect.setColor( data->GetColor() );
+        Rectangle rect(width,  (this->height)*(data->GetPrct()));
+        rect.setColor( data->GetColor().r , data->GetColor().g, data->GetColor().b );
+        rect.setBotLeftCorner(Point3D(this->GetBotLeftCorner().getX()+(width*i) , this->GetBotLeftCorner().getY(), 0));
+        
         win->draw(rect);
+        
+        delete(data);
     }
 }
 
