@@ -50,23 +50,39 @@ void BarGraph1::draw(MyWindow* win) {
     // type : true = vertical, false = horizontal
     if(this->type == true){
         width = this->width/(n*len);
+        
+        for(int j = 0; j < len; j++){
+            for(int i = 0; i < n; i++){
+
+                Data1* data = tableau[i];
+                Rectangle rect( width,  (this->height)*(data->getPrctById(j)) );
+                rect.setColor( data->GetColor().r , data->GetColor().g, data->GetColor().b );
+                if(i == 0 && j != 0){
+                    rect.setBotLeftCorner(Point3D(this->GetBotLeftCorner().getX()+(width*(j*n+i+1)) , this->GetBotLeftCorner().getY(), 0));
+                }else{
+                    rect.setBotLeftCorner(Point3D(this->GetBotLeftCorner().getX()+(width*(j*n+i)) , this->GetBotLeftCorner().getY(), 0));
+                }
+                win->draw(rect);
+            }
+        }
+        
     }else{
         height = this->height/(n*len);
-    }
-    
-    for(int j = 0; j < len; j++){
-        for(int i = 0; i < n; i++){
-
-            Data1* data = tableau[i];
-            Rectangle rect( width,  (this->height)*(data->getPrctById(j)) );
-            rect.setColor( data->GetColor().r , data->GetColor().g, data->GetColor().b );
-            if(i == 0 and j != 0){
-                rect.setBotLeftCorner(Point3D(this->GetBotLeftCorner().getX()+(width*(j*n+i+1)) , this->GetBotLeftCorner().getY(), 0));
-            }else{
-                rect.setBotLeftCorner(Point3D(this->GetBotLeftCorner().getX()+(width*(j*n+i)) , this->GetBotLeftCorner().getY(), 0));
+        
+        for(int j = 0; j < len; j++){
+            float prevWidth = 0;
+            for(int i = 0; i < n; i++){
+                Data1* data = tableau[i];
+                Rectangle rect( (this->width)*(data->getPrctById(j)) ,  height );
+                prevWidth += (this->width)*(data->getPrctById(j));
+                rect.setColor( data->GetColor().r , data->GetColor().g, data->GetColor().b );
+                
+                rect.setBotLeftCorner(Point3D( (this->GetBotLeftCorner().getX()) + prevWidth - (this->width)*(data->getPrctById(j)), this->GetBotLeftCorner().getY()+((height)*(j)), 0));
+                win->draw(rect);
             }
-            win->draw(rect);
         }
+        
     }
+     
 }
 
