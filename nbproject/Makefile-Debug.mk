@@ -40,7 +40,6 @@ OBJECTFILES= \
 	${OBJECTDIR}/BarGraph3.o \
 	${OBJECTDIR}/Chart.o \
 	${OBJECTDIR}/Data1.o \
-	${OBJECTDIR}/Data2.o \
 	${OBJECTDIR}/Disc.o \
 	${OBJECTDIR}/LineGraph.o \
 	${OBJECTDIR}/MyDrawable.o \
@@ -101,11 +100,6 @@ ${OBJECTDIR}/Data1.o: Data1.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Data1.o Data1.cpp
-
-${OBJECTDIR}/Data2.o: Data2.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Data2.o Data2.cpp
 
 ${OBJECTDIR}/Disc.o: Disc.cpp 
 	${MKDIR} -p ${OBJECTDIR}

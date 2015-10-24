@@ -18,7 +18,7 @@ using namespace std;
 
 class BarGraph1: public Chart {
 public:
-    BarGraph1(float width, float height, Point3D botLeftCorner);
+    BarGraph1(float width, float height, Point3D botLeftCorner, bool type);
     BarGraph1(const BarGraph1& orig);
     virtual ~BarGraph1();
     void SetHeight(float height);
@@ -29,6 +29,7 @@ public:
     Point3D GetBotLeftCorner() const;
     void draw(MyWindow* win);
 private:
+    bool type; // true = vertical, false = horizontal
     Point3D botLeftCorner;
     float width;
     float height;
