@@ -9,6 +9,7 @@
 #define	DATA1_H
 
 #include "Color.h"
+#include <vector>
 
 class Data1 {
 public:
@@ -17,10 +18,12 @@ public:
     virtual ~Data1();
     void SetColor(const Color& color);
     Color GetColor() const;
-    void SetPrct(float prct);
-    float GetPrct() const;
+    void addPrct(float prct);
+    float getPrctById(int i) const;
+    int getSize();
 private:
-    float prct;
+    vector<float>tabPrct;
+    //float prct;
     Color color;
 };
 

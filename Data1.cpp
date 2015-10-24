@@ -8,7 +8,7 @@
 #include "Data1.h"
 
 Data1::Data1(float prct, const Color& color) {
-    this->prct = prct;
+    this->tabPrct.push_back(prct);
     this->color.setColor(color);
 }
 
@@ -26,11 +26,16 @@ Color Data1::GetColor() const {
     return color;
 }
 
-void Data1::SetPrct(float prct) {
-    this->prct = prct;
+void Data1::addPrct(float prct) {
+    this->tabPrct.push_back(prct);
 }
 
-float Data1::GetPrct() const {
-    return prct;
+float Data1::getPrctById(int i) const {
+    return this->tabPrct[i];
 }
+
+int Data1::getSize() {
+    return this->tabPrct.size();
+}
+
 

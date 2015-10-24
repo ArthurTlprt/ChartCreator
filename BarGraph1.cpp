@@ -43,18 +43,25 @@ Point3D BarGraph1::GetBotLeftCorner() const {
 }
 void BarGraph1::draw(MyWindow* win) {
     int n = Chart::size();
-    cout << n << endl;
-    float width = this->width/n;
-    for(int i = 0; i < n; i++){
-        
-        Data1* data = tableau[i];
-        Rectangle rect(width,  (this->height)*(data->GetPrct()));
-        rect.setColor( data->GetColor().r , data->GetColor().g, data->GetColor().b );
-        rect.setBotLeftCorner(Point3D(this->GetBotLeftCorner().getX()+(width*i) , this->GetBotLeftCorner().getY(), 0));
-        
-        win->draw(rect);
-        
-        delete(data);
+    cout << "chart::size" << n << endl;
+    int len = tableau[0]->getSize();
+    cout << "getSize tab 0 :" << len << endl;
+    float width = this->width/(n*len);
+    
+    for(int j = 0; j < len; j++){
+        for(int i = 0; i < n; i++){
+
+            Data1* data = tableau[i];
+            Rectangle rect( width,  (this->height)*(data->getPrctById(j)) );
+            //Rectangle rect(width,  300);
+            rect.setColor( data->GetColor().r , data->GetColor().g, data->GetColor().b );
+            //rect.setBotLeftCorner(Point3D(this->GetBotLeftCorner().getX()+(width*(j*n+i)) , this->GetBotLeftCorner().getY(), 0));
+            rect.setBotLeftCorner(Point3D(this->GetBotLeftCorner().getX()+(width*(j*n+i)) , this->GetBotLeftCorner().getY(), 0));
+
+            win->draw(rect);
+
+            //delete(data);
+        }
     }
 }
 
