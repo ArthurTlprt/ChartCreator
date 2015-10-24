@@ -33,7 +33,7 @@ int main(int argc, char** argv) {
     
     bool type = false;
     
-    BarGraph1 graph1(100, 100, Point3D(100, 100, 0), type);
+    BarGraph1 graph1(100, 400, Point3D(100, 100, 0), type);
     
     Data1* data0 = new Data1(0.75, Color(100, 100, 100));
     Data1* data1 = new Data1(0.15, Color(100, 0, 255));
