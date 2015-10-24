@@ -77,7 +77,7 @@ void BarGraph1::draw(MyWindow* win) {
                 prevWidth += (this->width)*(data->getPrctById(j));
                 rect.setColor( data->GetColor().r , data->GetColor().g, data->GetColor().b );
                 
-                rect.setBotLeftCorner(Point3D( (this->GetBotLeftCorner().getX()) + prevWidth - (this->width)*(data->getPrctById(j)), this->GetBotLeftCorner().getY()+((height)*(j*(j+1))), 0));
+                rect.setBotLeftCorner(Point3D( (this->GetBotLeftCorner().getX()) + prevWidth - (this->width)*(data->getPrctById(j)), this->GetBotLeftCorner().getY()+((height)*(2*(j+1))), 0));
                 win->draw(rect);
             }
         }

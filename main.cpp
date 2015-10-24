@@ -33,7 +33,7 @@ int main(int argc, char** argv) {
     
     bool type = false;
     
-    BarGraph1 graph1(100, 400, Point3D(100, 100, 0), type);
+    BarGraph1 graph1(200, 900, Point3D(100, 100, 0), type);
     
     Data1* data0 = new Data1(0.75, Color(100, 100, 100));
     Data1* data1 = new Data1(0.15, Color(100, 0, 255));
@@ -61,6 +61,41 @@ int main(int argc, char** argv) {
     /*
      * Graph 2
      */
+    
+    data0->addPrct(0.3);
+    data1->addPrct(0.8);
+    data2->addPrct(0.12);
+    data3->addPrct(0.7);
+    data4->addPrct(0.23);
+    data5->addPrct(0.6);
+    
+    data0->addPrct(0.3);
+    data1->addPrct(0.8);
+    data2->addPrct(0.12);
+    data3->addPrct(0.7);
+    data4->addPrct(0.23);
+    data5->addPrct(0.6);
+    
+    data0->addPrct(0.3);
+    data1->addPrct(0.8);
+    data2->addPrct(0.12);
+    data3->addPrct(0.7);
+    data4->addPrct(0.23);
+    data5->addPrct(0.6);
+    
+    data0->addPrct(0.3);
+    data1->addPrct(0.8);
+    data2->addPrct(0.12);
+    data3->addPrct(0.7);
+    data4->addPrct(0.23);
+    data5->addPrct(0.6);
+    
+    data0->addPrct(0.3);
+    data1->addPrct(0.8);
+    data2->addPrct(0.12);
+    data3->addPrct(0.7);
+    data4->addPrct(0.23);
+    data5->addPrct(0.6);
     
     data0->addPrct(0.3);
     data1->addPrct(0.8);
