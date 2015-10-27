@@ -8,15 +8,15 @@
 #include "BarGraph1.h"
 #include "Rectangle.h"
 
-BarGraph1::BarGraph1(float width, float height, Point3D botLeftCorner, bool type, const Chart& chart): Chart(chart){
+BarGraph1::BarGraph1(float width, float height, Point3D botLeftCorner, bool type, string fileName): DataParser(fileName){
     this->type = type;
     this->width = width;
     this->height = height;
     this->botLeftCorner = botLeftCorner;
 }
 
-BarGraph1::BarGraph1(const BarGraph1& orig) {
-}
+/*BarGraph1::BarGraph1(const BarGraph1& orig) {
+}*/
 
 BarGraph1::~BarGraph1() {
 }
@@ -43,7 +43,7 @@ Point3D BarGraph1::GetBotLeftCorner() const {
 }
 void BarGraph1::draw(MyWindow* win) {
     
-    int n = Chart::size();
+    /*int n = Chart::size();
     int len = tableau[0]->getSize();
     
      float width, height;
@@ -82,7 +82,7 @@ void BarGraph1::draw(MyWindow* win) {
             }
         }
         
-    }
+    }*/
      
 }
 

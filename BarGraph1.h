@@ -11,15 +11,16 @@
 #include "Point3D.h"
 #include "Chart.h"
 #include "MyWindow.h"
+#include "DataParser.h"
 #include <vector>
 //#include "Data1.h"
 
 using namespace std;
 
-class BarGraph1: public Chart {
+class BarGraph1: public DataParser {
 public:
-    BarGraph1(float width, float height, Point3D botLeftCorner, bool type, const Chart& chart);
-    BarGraph1(const BarGraph1& orig);
+    BarGraph1(float width, float height, Point3D botLeftCorner, bool type, string fileName);
+    //BarGraph1(const BarGraph1& orig);
     virtual ~BarGraph1();
     void SetHeight(float height);
     float GetHeight() const;

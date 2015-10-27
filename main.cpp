@@ -34,9 +34,9 @@ int main(int argc, char** argv) {
     
     bool type = false;
     
-    Chart chart;
+    string fileName = "src.txt";
     
-    BarGraph1 graph1(200, 900, Point3D(100, 100, 0), type, chart);
+    BarGraph1 graph1(200, 900, Point3D(100, 100, 0), type, fileName);
     
     Data1* data0 = new Data1(0.75, Color(100, 100, 100));
     Data1* data1 = new Data1(0.15, Color(100, 0, 255));
@@ -47,12 +47,12 @@ int main(int argc, char** argv) {
     
     
     
-    graph1.add(data0);
+    /*graph1.add(data0);
     graph1.add(data1);
     graph1.add(data2);
     graph1.add(data3);
     graph1.add(data4);
-    graph1.add(data5);
+    graph1.add(data5);*/
     
     //graph1.draw(win);
     

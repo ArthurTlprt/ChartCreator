@@ -10,9 +10,13 @@
 
 #include "Color.h"
 #include <vector>
+#include <string>
+
+using namespace std;
 
 class Data1 {
 public:
+    Data1();
     Data1(float prct, const Color& color);
     Data1(const Data1& orig);
     virtual ~Data1();
@@ -21,9 +25,11 @@ public:
     void addPrct(float prct);
     float getPrctById(int i) const;
     int getSize();
+    void SetName(string name);
+    string GetName() const;
 private:
     vector<float>tabPrct;
-    //float prct;
+    string name;
     Color color;
 };
 
