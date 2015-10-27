@@ -10,6 +10,7 @@
       <itemPath>Chart.h</itemPath>
       <itemPath>Color.h</itemPath>
       <itemPath>Data1.h</itemPath>
+      <itemPath>DataParser.h</itemPath>
       <itemPath>Disc.h</itemPath>
       <itemPath>LineGraph.h</itemPath>
       <itemPath>MyDrawable.h</itemPath>
@@ -32,6 +33,7 @@
       <itemPath>BarGraph3.cpp</itemPath>
       <itemPath>Chart.cpp</itemPath>
       <itemPath>Data1.cpp</itemPath>
+      <itemPath>DataParser.cpp</itemPath>
       <itemPath>Disc.cpp</itemPath>
       <itemPath>LineGraph.cpp</itemPath>
       <itemPath>MyDrawable.cpp</itemPath>
@@ -92,9 +94,9 @@
       </item>
       <item path="Data1.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="Data2.cpp" ex="false" tool="1" flavor2="0">
+      <item path="DataParser.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="Data2.h" ex="false" tool="3" flavor2="0">
+      <item path="DataParser.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Disc.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -177,9 +179,9 @@
       </item>
       <item path="Data1.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="Data2.cpp" ex="false" tool="1" flavor2="0">
+      <item path="DataParser.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="Data2.h" ex="false" tool="3" flavor2="0">
+      <item path="DataParser.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Disc.cpp" ex="false" tool="1" flavor2="0">
       </item>

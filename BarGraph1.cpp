@@ -8,7 +8,7 @@
 #include "BarGraph1.h"
 #include "Rectangle.h"
 
-BarGraph1::BarGraph1(float width, float height, Point3D botLeftCorner, bool type){
+BarGraph1::BarGraph1(float width, float height, Point3D botLeftCorner, bool type, const Chart& chart): Chart(chart){
     this->type = type;
     this->width = width;
     this->height = height;

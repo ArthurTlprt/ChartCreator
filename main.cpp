@@ -16,6 +16,7 @@
 #include "PieChart2.h"
 #include "LineGraph.h"
 #include "Data1.h"
+#include "DataParser.h"
 #include <unistd.h>
 #include <iostream>
 
@@ -33,7 +34,9 @@ int main(int argc, char** argv) {
     
     bool type = false;
     
-    BarGraph1 graph1(200, 900, Point3D(100, 100, 0), type);
+    Chart chart;
+    
+    BarGraph1 graph1(200, 900, Point3D(100, 100, 0), type, chart);
     
     Data1* data0 = new Data1(0.75, Color(100, 100, 100));
     Data1* data1 = new Data1(0.15, Color(100, 0, 255));
@@ -110,7 +113,7 @@ int main(int argc, char** argv) {
      * Fin graph2
      */
     
-    
+    DataParser myParser("src.txt");
     
     
     usleep(10000000);  
