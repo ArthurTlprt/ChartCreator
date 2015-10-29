@@ -13,6 +13,7 @@
 #include "MyWindow.h"
 #include "DataParser.h"
 #include <vector>
+#include "Line.h"
 
 using namespace std;
 

@@ -33,7 +33,7 @@ int main(int argc, char** argv) {
     {
         bool type = true;
 
-        string fileName = "graph1.txt";
+        string fileName = "graph0.txt";
 
         BarGraph1 graph1(300, 400, Point3D(100, 650, 0), type, fileName);
 
@@ -63,7 +63,7 @@ int main(int argc, char** argv) {
     {
         bool type = true;
 
-        string fileName = "graph0.txt";
+        string fileName = "graph1.txt";
 
         BarGraph1 graph1(300, 300, Point3D(500, 650, 0), type, fileName);
 
@@ -73,8 +73,22 @@ int main(int argc, char** argv) {
     /**/
     
     
-    Line line(Point3D(200, 200, 0), Point3D(500, 500, 0));
-    win->draw(line);
+    /*Line line1(Point3D(200, 200, 0), Point3D(500, 500, 0));
+    line1.setColor(66, 9, 19);
+    win->draw(line1);
+    */
+    
+                /*
+     Graph4
+     */
+    {
+        string fileName = "graph2.txt";
+
+        LineGraph graph4(300, 300, Point3D(600, 350, 0), fileName);
+
+        graph4.draw(win);        
+    }
+    /**/
     
     
     usleep(30000000);  
