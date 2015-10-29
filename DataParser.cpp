@@ -46,7 +46,7 @@ DataParser::DataParser(string fileName) {
         string ligne;
         while(getline(f, ligne))  
         {
-            Data1* data = new Data1(0.0, Color(0, 0, 0));
+            Data1* data = new Data1(Color(0, 0, 0));
             // get name
             int i = 0, j = 0, k = 0;
             string name;
@@ -66,7 +66,7 @@ DataParser::DataParser(string fileName) {
                     stringToFloat(prct, num);
                     data->addPrct(num);
                     
-                    cout << num << endl;
+                    //cout << num << endl;
                     prct = "";
                 }else{
                     prct += ligne[j];
@@ -78,7 +78,7 @@ DataParser::DataParser(string fileName) {
             stringToFloat(prct, num);
             data->addPrct(num);
 
-            cout << num << endl;
+            //cout << num << endl;
                    
             //get color
             j++;        
@@ -99,9 +99,9 @@ DataParser::DataParser(string fileName) {
             stringToInt(str, colorInt[2]);
             
             
-            cout << colorInt[0] << endl;
+            /*cout << colorInt[0] << endl;
             cout << colorInt[1] << endl;
-            cout << colorInt[2] << endl;
+            cout << colorInt[2] << endl;*/
             
             data->SetColor(Color(colorInt[0], colorInt[1], colorInt[2]));
             

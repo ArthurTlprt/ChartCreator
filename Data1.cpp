@@ -15,6 +15,9 @@ Data1::Data1(float prct, const Color& color) {
     this->tabPrct.push_back(prct);
     this->color.setColor(color);
 }
+Data1::Data1(const Color& color){
+    this->color.setColor(color);
+}
 
 Data1::Data1(const Data1& orig) {
 }
@@ -49,5 +52,15 @@ void Data1::SetName(string name) {
 string Data1::GetName() const {
     return name;
 }
+
+void Data1::print() {
+    cout << name << endl;
+    color.print();
+    cout << "prct" << endl;
+    for(int i=0; i < tabPrct.size(); i++){
+        cout << tabPrct[i] << endl;
+    }
+}
+
 
 

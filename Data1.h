@@ -11,6 +11,7 @@
 #include "Color.h"
 #include <vector>
 #include <string>
+#include <iostream>
 
 using namespace std;
 
@@ -18,6 +19,7 @@ class Data1 {
 public:
     Data1();
     Data1(float prct, const Color& color);
+    Data1(const Color& color);
     Data1(const Data1& orig);
     virtual ~Data1();
     void SetColor(const Color& color);
@@ -27,6 +29,7 @@ public:
     int getSize();
     void SetName(string name);
     string GetName() const;
+    void print();
 private:
     vector<float>tabPrct;
     string name;

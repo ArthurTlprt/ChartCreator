@@ -32,11 +32,13 @@ int main(int argc, char** argv) {
      Graph2
      */
     
-    bool type = false;
+    bool type = true;
     
-    string fileName = "src.txt";
+    string fileName = "graph1.txt";
     
-    BarGraph1 graph1(200, 900, Point3D(100, 100, 0), type, fileName);
+    BarGraph1 graph1(1000, 800, Point3D(100, 800, 0), type, fileName);
+    
+    graph1.draw(win);
     
    /* Data1* data0 = new Data1(0.75, Color(100, 100, 100));
     Data1* data1 = new Data1(0.15, Color(100, 0, 255));
@@ -117,7 +119,7 @@ int main(int argc, char** argv) {
     
     
     
-    usleep(10000000);  
+    usleep(100000000);  
     
     MyWindow::destroyWindow();
     return 0;
