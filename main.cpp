@@ -10,8 +10,6 @@
 #include "Disc.h"
 #include "Rectangle.h"
 #include "BarGraph1.h"
-#include "BarGraph2.h"
-#include "BarGraph3.h"
 #include "PieChart1.h"
 #include "PieChart2.h"
 #include "LineGraph.h"
@@ -29,97 +27,52 @@ int main(int argc, char** argv) {
 
     
     /*
+     Graph1
+     */
+    {
+        bool type = true;
+
+        string fileName = "graph1.txt";
+
+        BarGraph1 graph1(300, 400, Point3D(100, 650, 0), type, fileName);
+
+        graph1.draw(win);
+    }
+    
+    /**/
+    
+        /*
      Graph2
      */
+    {
+        bool type = false;
+
+        string fileName = "graph1.txt";
+
+        BarGraph1 graph1(100, 300, Point3D(100, 100, 0), type, fileName);
+
+        graph1.draw(win);        
+    }
     
-    bool type = true;
+    /**/
     
-    string fileName = "graph1.txt";
-    
-    BarGraph1 graph1(1000, 800, Point3D(100, 800, 0), type, fileName);
-    
-    graph1.draw(win);
-    
-   /* Data1* data0 = new Data1(0.75, Color(100, 100, 100));
-    Data1* data1 = new Data1(0.15, Color(100, 0, 255));
-    Data1* data2 = new Data1(1, Color(255, 100, 100));
-    Data1* data3 = new Data1(0.2, Color(25, 150, 100));
-    Data1* data4 = new Data1(0.57, Color(255, 150, 10));
-    Data1* data5 = new Data1(0.8, Color(255, 255, 100));*/
-    
-    
-    
-    /*graph1.add(data0);
-    graph1.add(data1);
-    graph1.add(data2);
-    graph1.add(data3);
-    graph1.add(data4);
-    graph1.add(data5);*/
-    
-    //graph1.draw(win);
-    
-    /*
-     Fin BarGraph1
+            /*
+     Graph3
      */
+    {
+        bool type = true;
+
+        string fileName = "graph0.txt";
+
+        BarGraph1 graph1(300, 300, Point3D(500, 650, 0), type, fileName);
+
+        graph1.draw(win);        
+    }
+    
+    /**/
     
     
-    /*
-     * Graph 2
-     
-    
-    data0->addPrct(0.3);
-    data1->addPrct(0.8);
-    data2->addPrct(0.12);
-    data3->addPrct(0.7);
-    data4->addPrct(0.23);
-    data5->addPrct(0.6);
-    
-    data0->addPrct(0.3);
-    data1->addPrct(0.8);
-    data2->addPrct(0.12);
-    data3->addPrct(0.7);
-    data4->addPrct(0.23);
-    data5->addPrct(0.6);
-    
-    data0->addPrct(0.3);
-    data1->addPrct(0.8);
-    data2->addPrct(0.12);
-    data3->addPrct(0.7);
-    data4->addPrct(0.23);
-    data5->addPrct(0.6);
-    
-    data0->addPrct(0.3);
-    data1->addPrct(0.8);
-    data2->addPrct(0.12);
-    data3->addPrct(0.7);
-    data4->addPrct(0.23);
-    data5->addPrct(0.6);
-    
-    data0->addPrct(0.3);
-    data1->addPrct(0.8);
-    data2->addPrct(0.12);
-    data3->addPrct(0.7);
-    data4->addPrct(0.23);
-    data5->addPrct(0.6);
-    
-    data0->addPrct(0.3);
-    data1->addPrct(0.8);
-    data2->addPrct(0.12);
-    data3->addPrct(0.7);
-    data4->addPrct(0.23);
-    data5->addPrct(0.6);
-    
-    graph1.draw(win);
-  
-    /*
-     * Fin graph2
-     */
-    
-    
-    
-    
-    
-    usleep(100000000);  
+    usleep(30000000);  
     
     MyWindow::destroyWindow();
     return 0;

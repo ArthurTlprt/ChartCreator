@@ -43,7 +43,7 @@ Point3D BarGraph1::GetBotLeftCorner() const {
 }
 void BarGraph1::draw(MyWindow* win) {
     
-    int n = chartData.size();   // n is the number of bar of the same 
+    int n = chartData.size();   // n is the number of bar of the same color
     //int len = tableau[0]->getSize();
     int len = chartData.getDataById(0)->getSize();
     
@@ -60,17 +60,16 @@ void BarGraph1::draw(MyWindow* win) {
                 Rectangle rect( width,  (this->height)*(data->getPrctById(j)) );    // i define a bar
                 rect.setColor( data->GetColor().r , data->GetColor().g, data->GetColor().b );
                 
-                if(i == 0 && j != 0){
-                    rect.setBotLeftCorner(Point3D(this->GetBotLeftCorner().getX()+(width*(j*n+i+1)) , this->GetBotLeftCorner().getY(), 0));
-                }else{
-                    rect.setBotLeftCorner(Point3D(this->GetBotLeftCorner().getX()+(width*(j*n+i)) , this->GetBotLeftCorner().getY(), 0));
-                }
+                rect.setBotLeftCorner(Point3D(this->GetBotLeftCorner().getX()+(width*(((n+1)*j)+i)) , this->GetBotLeftCorner().getY(), 0));
+                
                 win->draw(rect);
             }
         }
         
     }else{
+        
         height = this->height/(n*len);
+        //width = this->width/(chartData.size());
         
         for(int j = 0; j < len; j++){
             float prevWidth = 0;

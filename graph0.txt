@@ -1,0 +1,5 @@
+IBM Stock"0.2"180,50,200"
+Cisco Stock"0.6"50,180,200"
+Facebook Stock"0.8"50,100,250"
+Apple Stock"0.5"150,170,120"
+Google Stock"0.9"50,250,100"
