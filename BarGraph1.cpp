@@ -43,8 +43,9 @@ Point3D BarGraph1::GetBotLeftCorner() const {
 }
 void BarGraph1::draw(MyWindow* win) {
     
-    /*int n = Chart::size();
-    int len = tableau[0]->getSize();
+    int n = chartData.size();
+    //int len = tableau[0]->getSize();
+    int len = chartData.getDataById(0)->getSize();
     
      float width, height;
     // type : true = vertical, false = horizontal
@@ -54,7 +55,7 @@ void BarGraph1::draw(MyWindow* win) {
         for(int j = 0; j < len; j++){
             for(int i = 0; i < n; i++){
 
-                Data1* data = tableau[i];
+                Data1* data = chartData.getDataById(i);
                 Rectangle rect( width,  (this->height)*(data->getPrctById(j)) );
                 rect.setColor( data->GetColor().r , data->GetColor().g, data->GetColor().b );
                 if(i == 0 && j != 0){
@@ -72,7 +73,7 @@ void BarGraph1::draw(MyWindow* win) {
         for(int j = 0; j < len; j++){
             float prevWidth = 0;
             for(int i = 0; i < n; i++){
-                Data1* data = tableau[i];
+                Data1* data = chartData.getDataById(i);
                 Rectangle rect( (this->width)*(data->getPrctById(j)) ,  height );
                 prevWidth += (this->width)*(data->getPrctById(j));
                 rect.setColor( data->GetColor().r , data->GetColor().g, data->GetColor().b );
@@ -82,7 +83,7 @@ void BarGraph1::draw(MyWindow* win) {
             }
         }
         
-    }*/
+    }
      
 }
 

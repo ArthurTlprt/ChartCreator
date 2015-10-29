@@ -43,10 +43,10 @@ DataParser::DataParser(string fileName) {
  
     if(f)
     {
-        Data1* data0 = new Data1(0.0, Color(0, 0, 0));
         string ligne;
         while(getline(f, ligne))  
         {
+            Data1* data = new Data1(0.0, Color(0, 0, 0));
             // get name
             int i = 0, j = 0, k = 0;
             string name;
@@ -55,7 +55,7 @@ DataParser::DataParser(string fileName) {
                 name += ligne[i];
                 i++;
             }
-            data0->SetName(name);
+            data->SetName(name);
             
             //get prct
             j = i+1;
@@ -64,7 +64,7 @@ DataParser::DataParser(string fileName) {
                 if(ligne[j] == 44){
                     float num;
                     stringToFloat(prct, num);
-                    data0->addPrct(num);
+                    data->addPrct(num);
                     
                     cout << num << endl;
                     prct = "";
@@ -76,7 +76,7 @@ DataParser::DataParser(string fileName) {
 
             float num;
             stringToFloat(prct, num);
-            data0->addPrct(num);
+            data->addPrct(num);
 
             cout << num << endl;
                    
@@ -103,9 +103,9 @@ DataParser::DataParser(string fileName) {
             cout << colorInt[1] << endl;
             cout << colorInt[2] << endl;
             
-            data0->SetColor(Color(colorInt[0], colorInt[1], colorInt[2]));
+            data->SetColor(Color(colorInt[0], colorInt[1], colorInt[2]));
             
-            
+            chartData.add(data);
         }
         
     }

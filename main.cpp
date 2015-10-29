@@ -38,12 +38,12 @@ int main(int argc, char** argv) {
     
     BarGraph1 graph1(200, 900, Point3D(100, 100, 0), type, fileName);
     
-    Data1* data0 = new Data1(0.75, Color(100, 100, 100));
+   /* Data1* data0 = new Data1(0.75, Color(100, 100, 100));
     Data1* data1 = new Data1(0.15, Color(100, 0, 255));
     Data1* data2 = new Data1(1, Color(255, 100, 100));
     Data1* data3 = new Data1(0.2, Color(25, 150, 100));
     Data1* data4 = new Data1(0.57, Color(255, 150, 10));
-    Data1* data5 = new Data1(0.8, Color(255, 255, 100));
+    Data1* data5 = new Data1(0.8, Color(255, 255, 100));*/
     
     
     
@@ -63,7 +63,7 @@ int main(int argc, char** argv) {
     
     /*
      * Graph 2
-     */
+     
     
     data0->addPrct(0.3);
     data1->addPrct(0.8);
@@ -113,7 +113,8 @@ int main(int argc, char** argv) {
      * Fin graph2
      */
     
-    DataParser myParser("src.txt");
+    
+    
     
     
     usleep(10000000);  

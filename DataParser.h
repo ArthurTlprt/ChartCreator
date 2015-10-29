@@ -27,6 +27,7 @@ public:
 private:
     bool stringToFloat(string str, float &f);
     bool stringToInt(string str, int &x);
+protected:
     Chart chartData;
 };
 
