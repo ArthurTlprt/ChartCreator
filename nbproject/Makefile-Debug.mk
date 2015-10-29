@@ -40,6 +40,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/Data1.o \
 	${OBJECTDIR}/DataParser.o \
 	${OBJECTDIR}/Disc.o \
+	${OBJECTDIR}/Line.o \
 	${OBJECTDIR}/LineGraph.o \
 	${OBJECTDIR}/MyDrawable.o \
 	${OBJECTDIR}/MyWindow.o \
@@ -99,6 +100,11 @@ ${OBJECTDIR}/Disc.o: Disc.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Disc.o Disc.cpp
+
+${OBJECTDIR}/Line.o: Line.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Line.o Line.cpp
 
 ${OBJECTDIR}/LineGraph.o: LineGraph.cpp 
 	${MKDIR} -p ${OBJECTDIR}

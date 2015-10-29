@@ -15,6 +15,7 @@
 #include "LineGraph.h"
 #include "Data1.h"
 #include "DataParser.h"
+#include "Line.h"
 #include <unistd.h>
 #include <iostream>
 
@@ -70,6 +71,10 @@ int main(int argc, char** argv) {
     }
     
     /**/
+    
+    
+    Line line(Point3D(200, 200, 0), Point3D(500, 500, 0));
+    win->draw(line);
     
     
     usleep(30000000);  
