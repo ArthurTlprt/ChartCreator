@@ -16,6 +16,7 @@
 #include "Data1.h"
 #include "DataParser.h"
 #include "Line.h"
+#include "Andres.h"
 #include <unistd.h>
 #include <iostream>
 
@@ -90,6 +91,10 @@ int main(int argc, char** argv) {
     }
     /**/
     
+    
+    Andres andres(Point3D(300, 300, 0), 200, Color(100, 100, 100));
+    //andres.setColor(Color(100, 100, 100));
+    andres.draw(win);
     
     usleep(30000000);  
     

@@ -44,7 +44,8 @@ LineGraph::LineGraph(const LineGraph& orig) {
 
 void LineGraph::draw(MyWindow* win) {
     
-    
+    cout << "largeur " << width + botLeftCorner.getX() << endl;
+    cout << "hauteur " << height + botLeftCorner.getY() << endl;
     
     int n = chartData.size();   // n = nb color
     int len = chartData.getDataById(0)->getSize(); // len = nb point

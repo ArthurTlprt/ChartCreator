@@ -6,6 +6,7 @@ class Point3D;
 #include "Point3D.h"
 #include "Shape.h"
 #include <cmath>
+#include "Line.h"
 
 class Disc : public Shape{
 private:

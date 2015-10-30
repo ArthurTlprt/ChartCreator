@@ -35,6 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/Andres.o \
 	${OBJECTDIR}/BarGraph1.o \
 	${OBJECTDIR}/Chart.o \
 	${OBJECTDIR}/Data1.o \
@@ -75,6 +76,11 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/chartcreator: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/chartcreator ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/Andres.o: Andres.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Andres.o Andres.cpp
 
 ${OBJECTDIR}/BarGraph1.o: BarGraph1.cpp 
 	${MKDIR} -p ${OBJECTDIR}
