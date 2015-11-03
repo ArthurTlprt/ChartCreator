@@ -2,6 +2,7 @@
 #include <iostream>
 using namespace std;
 
+
 Disc::Disc() : Shape(), radius(1) {
     cout << "Disc: Default constructor " << this << endl;
 }
@@ -11,14 +12,14 @@ Disc::Disc(float x, float y, float z) : Shape(), radius(1), center(x, y, z) {
     cout << "Disc: constructor " << this << endl;
 }
 
-Disc::Disc(float radius, const Point3D & center, const Color & color) : Shape(color), radius(radius), center(center) {
+Disc::Disc(float radius, const Point3D & center, const Color & color) : Shape(color), radius(radius), center(center){
     cout << "Disc: constructor " << this << endl;
 
 }
-
+/*
 Disc::Disc(const Disc& disc) : Shape(disc), radius(disc.radius), center(disc.center) {
     cout << "Disc: copy constructor " << this << endl;
-}
+}*/
 
 const float & Disc::getRadius() {
     return radius;
@@ -46,8 +47,9 @@ void Disc::draw(MyWindow* win) const {
             }
         }
     }*/
-    
 }
+
+
 
 float Disc::getArea() {
     return 3.14957 * radius * radius;

@@ -91,10 +91,13 @@ int main(int argc, char** argv) {
     }
     /**/
     
+    Disc disc(10, Point3D(1150, 240, 0), Color(255, 255, 0));
+    win->draw(disc);
     
-    Andres andres(Point3D(300, 300, 0), 200, Color(100, 100, 100));
-    //andres.setColor(Color(100, 100, 100));
-    andres.draw(win);
+    
+    
+    
+    
     
     usleep(30000000);  
     

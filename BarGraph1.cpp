@@ -43,7 +43,7 @@ Point3D BarGraph1::GetBotLeftCorner() const {
 }
 void BarGraph1::draw(MyWindow* win) {
     
-    int n = chartData.size();   // n is the number of bar of the same color
+    int n = chartData.size();
     //int len = tableau[0]->getSize();
     int len = chartData.getDataById(0)->getSize();
     

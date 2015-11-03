@@ -49,7 +49,7 @@ void LineGraph::draw(MyWindow* win) {
     
     int n = chartData.size();   // n = nb color
     int len = chartData.getDataById(0)->getSize(); // len = nb point
-    float width = this->width/n;
+    float width = this->width/len;
     
     cout << "n: " << n << endl;
     cout << "l : " << len << endl;
