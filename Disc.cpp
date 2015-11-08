@@ -38,7 +38,7 @@ void Disc::setCenter(const Point3D & c) {
 };
 
 void Disc::draw(MyWindow* win) const {
-    /*for (int i = -radius; i <= radius; i++) {
+    for (int i = -radius; i <= radius; i++) {
         for (int j = -radius; j <= radius; j++) {
 
             if ((i * i + j * j) <= (radius * radius) && !(i >0 && j > 0)) {
@@ -46,7 +46,7 @@ void Disc::draw(MyWindow* win) const {
                 win->putPixel(center.getX() + i, center.getY() + j, getColor().r, getColor().g, getColor().b);
             }
         }
-    }*/
+    }
 }
 
 

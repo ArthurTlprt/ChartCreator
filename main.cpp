@@ -16,7 +16,6 @@
 #include "Data1.h"
 #include "DataParser.h"
 #include "Line.h"
-#include "Andres.h"
 #include <unistd.h>
 #include <iostream>
 
@@ -91,8 +90,14 @@ int main(int argc, char** argv) {
     }
     /**/
     
-    Disc disc(10, Point3D(1150, 240, 0), Color(255, 255, 0));
-    win->draw(disc);
+    {
+        string fileName = "graph0.txt";
+
+        PieChart1 graph5(100, Point3D(1100, 150, 0), fileName);
+
+        graph5.draw(win);        
+        
+    }
     
     
     

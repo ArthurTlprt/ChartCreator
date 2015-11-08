@@ -4,6 +4,7 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>Arc.h</itemPath>
       <itemPath>BarGraph1.h</itemPath>
       <itemPath>Chart.h</itemPath>
       <itemPath>Color.h</itemPath>
@@ -27,6 +28,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>Arc.cpp</itemPath>
       <itemPath>BarGraph1.cpp</itemPath>
       <itemPath>Chart.cpp</itemPath>
       <itemPath>Data1.cpp</itemPath>
@@ -70,6 +72,10 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
+      <item path="Arc.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Arc.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="BarGraph1.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="BarGraph1.h" ex="false" tool="3" flavor2="0">
@@ -151,6 +157,10 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="Arc.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Arc.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="BarGraph1.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="BarGraph1.h" ex="false" tool="3" flavor2="0">

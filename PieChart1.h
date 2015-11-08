@@ -12,13 +12,14 @@
 #include "Chart.h"
 #include "MyWindow.h"
 #include "DataParser.h"
-#include "Shape.h"
+#include "Arc.h"
+#include "Disc.h"
 #include <vector>
 #include <cmath>
 
 using namespace std;
 
-class PieChart1: public DataParser, public Shape {
+class PieChart1: public DataParser{
 public:
     PieChart1(float radius,const Point3D& center,string fileName);
     //PieChart1(const PieChart1& orig);
@@ -27,7 +28,7 @@ public:
     Point3D getCenter();
     void setRadius(float radius);
     float getRadius();
-    void draw(MyWindow*) const;
+    void draw(MyWindow* win);
 private:
     Point3D center;
     float radius;

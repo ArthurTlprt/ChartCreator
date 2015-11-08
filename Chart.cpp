@@ -30,6 +30,6 @@ Data1* Chart::getDataById(int id) {
     return tableau[id];
 }
 
-int Chart::size() {
+int Chart::size()const {
     return tableau.size();
 }
