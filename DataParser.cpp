@@ -55,8 +55,8 @@ DataParser::DataParser(string fileName) {
                 name += ligne[i];
                 i++;
             }
-            data->SetName(name);
-            
+            data->SetName(name); 
+           
             //get prct
             j = i+1;
             string prct;

@@ -15,7 +15,7 @@
 
 class Arc : public Shape{
 public:
-    Arc(float radius, float startAngle, float endAngle, Point3D center);
+    Arc(float radius, float startAngle, float endAngle, Point3D center,float endRadius);
     Arc(const Arc& orig);
     virtual ~Arc();
     void draw(MyWindow*) const;
@@ -29,6 +29,7 @@ private:
     float startAngle;
     float endAngle;
     Point3D center;
+    float endRadius;
 };
 
 #endif	/* ARC_H */

@@ -23,7 +23,7 @@ Chart::~Chart() {
 
 void Chart::add(Data1 * data) {
     tableau.push_back(data);
-    cout << "push_back some data" << endl;
+    //cout << "push_back some data" << endl;
 }
 
 Data1* Chart::getDataById(int id) {

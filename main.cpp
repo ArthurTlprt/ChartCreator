@@ -13,11 +13,14 @@
 #include "PieChart1.h"
 #include "PieChart2.h"
 #include "LineGraph.h"
+#include "Caption.h"
 #include "Data1.h"
 #include "DataParser.h"
 #include "Line.h"
 #include <unistd.h>
 #include <iostream>
+#include <SDL/SDL_ttf.h>
+
 
 using namespace std;
 
@@ -72,12 +75,6 @@ int main(int argc, char** argv) {
     
     /**/
     
-    
-    /*Line line1(Point3D(200, 200, 0), Point3D(500, 500, 0));
-    line1.setColor(66, 9, 19);
-    win->draw(line1);
-    */
-    
                 /*
      Graph4
      */
@@ -90,18 +87,50 @@ int main(int argc, char** argv) {
     }
     /**/
     
+                    /*
+     Graph5
+     */
+    
     {
         string fileName = "graph0.txt";
 
-        PieChart1 graph5(100, Point3D(1100, 150, 0), fileName);
+        PieChart1 graph5(100, Point3D(1000, 150, 0) ,0 , fileName);
 
         graph5.draw(win);        
         
     }
     
+    /**/
     
+                    /*
+     Graph6
+     */
     
+    {
+        string fileName = "graph0.txt";
+        Point3D center(1250, 150, 0);
+        
+        PieChart1 graph6(100, center, 50, fileName);
+
+        graph6.draw(win);        
+    }
     
+    /**/
+    
+     /*
+                     Caption
+     */
+    
+    {
+        string fileName = "graph0.txt";
+        
+        Caption caption(Point3D(1000, 600, 0),20, fileName);
+        
+        caption.draw(win);
+    }
+    
+    /**/
+    //usr/include/SDL/SDL_ttf.h
     
     
     usleep(30000000);  

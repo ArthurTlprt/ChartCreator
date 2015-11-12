@@ -37,6 +37,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/Arc.o \
 	${OBJECTDIR}/BarGraph1.o \
+	${OBJECTDIR}/Caption.o \
 	${OBJECTDIR}/Chart.o \
 	${OBJECTDIR}/Data1.o \
 	${OBJECTDIR}/DataParser.o \
@@ -86,6 +87,11 @@ ${OBJECTDIR}/BarGraph1.o: BarGraph1.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/BarGraph1.o BarGraph1.cpp
+
+${OBJECTDIR}/Caption.o: Caption.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Caption.o Caption.cpp
 
 ${OBJECTDIR}/Chart.o: Chart.cpp 
 	${MKDIR} -p ${OBJECTDIR}

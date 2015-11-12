@@ -23,7 +23,7 @@ using namespace std;
 #endif
 
 MyWindow::MyWindow(int x, int y, int width, int height) {
-    cout << "Constructor MyWindow" << endl;
+    //cout << "Constructor MyWindow" << endl;
     this->width = width;
     this->height = height;
     
@@ -40,7 +40,7 @@ MyWindow::~MyWindow() {
     SDL_FreeSurface(sdlWindow);
     SDL_FreeSurface(surface);
     SDL_Quit();
-    cout << "Destructor MyWindow" << endl;
+    //cout << "Destructor MyWindow" << endl;
 }
 
 void MyWindow::draw(const MyDrawable& drawable) {

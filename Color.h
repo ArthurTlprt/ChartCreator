@@ -11,15 +11,15 @@ public:
     int b;
 
     Color() : r(0), g(0), b(0) {
-        cout << "Default Constructor Color " << this << endl;
+        //cout << "Default Constructor Color " << this << endl;
     };
 
     Color(int r, int g, int b) : r(r), g(g), b(b) {
-        cout << "Constructor Color " << this << endl;
+        //cout << "Constructor Color " << this << endl;
     };
 
     Color(const Color & c) : r(c.r), g(c.g), b(c.b) {
-        cout << "Copy constructor Color " << this << endl;
+        //cout << "Copy constructor Color " << this << endl;
     };
 
     void setColor(int r, int g, int b) {
@@ -39,7 +39,7 @@ public:
     }
 
     ~Color() {
-        cout << "Destructor Color " << this << endl;
+        //cout << "Destructor Color " << this << endl;
     };
 };
 

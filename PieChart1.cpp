@@ -7,9 +7,10 @@
 
 #include "PieChart1.h"
 
-PieChart1::PieChart1(float radius,const Point3D& center,string fileName): DataParser(fileName) {
+PieChart1::PieChart1(float radius,const Point3D& center, float endRadius,string fileName): DataParser(fileName) {
     setRadius(radius);
     setCenter(center);
+    this->endRadius = endRadius;
 }
 
 void PieChart1::setCenter(Point3D center) {
@@ -43,7 +44,7 @@ void PieChart1::draw(MyWindow* win){
          
          endAngle = startAngle + ((chartData.getDataById(i)->getPrctById(0))*2*M_PI)/sum;
          
-         Arc arc(radius, startAngle, endAngle, center);
+         Arc arc(radius, startAngle, endAngle, center, endRadius);
          arc.setColor(color);
          win->draw(arc);
          

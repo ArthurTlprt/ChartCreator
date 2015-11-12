@@ -9,15 +9,15 @@ int Shape::getId() {
 }
 
 Shape::Shape(): MyDrawable(),id(getId()) {
-    cout << "Default constructor Shape " << this << endl;
+    //cout << "Default constructor Shape " << this << endl;
 }
 
 Shape::Shape(const Color& c): MyDrawable(c),id(getId()) {
-    cout << "Default constructor Shape " << this << endl;
+    //cout << "Default constructor Shape " << this << endl;
 }
 
 Shape::Shape(const Shape & s) : MyDrawable(s), id(s.id) {
-    cout << "Copy constructor Shape " << this << endl;
+    //cout << "Copy constructor Shape " << this << endl;
 }
 
 void Shape::draw(MyWindow*) const{
@@ -31,5 +31,5 @@ float Shape::getArea() {
 }
 
 Shape::~Shape() {
-    cout << "Destructor Shape" << this << endl;
+    //cout << "Destructor Shape" << this << endl;
 }

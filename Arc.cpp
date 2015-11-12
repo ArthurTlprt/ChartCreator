@@ -7,11 +7,12 @@
 
 #include "Arc.h"
 
-Arc::Arc(float radius, float startAngle, float endAngle, Point3D center) {
+Arc::Arc(float radius, float startAngle, float endAngle, Point3D center,float endRadius) {
     this->radius = radius;
     this->startAngle = startAngle;
     this->endAngle = endAngle;
     this->center  = center;
+    this->endRadius = endRadius;
 }
 
 Arc::Arc(const Arc& orig) {
@@ -40,7 +41,7 @@ float Arc::getEndAngle()const {
 }
 
 void Arc::draw(MyWindow* win) const {
-    for(int r = getRadius(); r > 0; r--) {
+    for(int r = getRadius(); r > endRadius; r--) {
         for(float theta = getStartAngle(); theta <= getEndAngle(); theta += 0.001) {
             win->putPixel(getCenter().getX()  + r*cos(theta), getCenter().getY() + r*(-sin(theta)), getColor().r, getColor().g, getColor().b);
             //setPixel(discContainer, (center.getX() + r*cos(theta)), (center.getY() + r*(-sin(theta))), color);
