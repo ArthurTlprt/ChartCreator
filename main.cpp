@@ -123,8 +123,9 @@ int main(int argc, char** argv) {
     
     {
         string fileName = "graph0.txt";
+        string font = "test.ttf";
         
-        Caption caption(Point3D(1000, 600, 0),20, fileName);
+        Caption caption(Point3D(1000, 600, 0),20, fileName, font);
         
         caption.draw(win);
     }

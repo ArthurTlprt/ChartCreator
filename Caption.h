@@ -12,21 +12,26 @@
 #include "MyWindow.h"
 #include "DataParser.h"
 #include "Rectangle.h"
+#include "Text.h"
 #include <SDL/SDL_ttf.h>
+#include <SDL/SDL_image.h>
 
 using namespace std;
 
 class Caption: public DataParser {
 public:
-    Caption(Point3D botLeftCorner, float width, string fileName);
+    Caption(Point3D botLeftCorner, float width, string fileName, string font);
     //Caption(const Caption& orig);
     virtual ~Caption();
     void setBotLeftCorner(Point3D botLeftCorner);
     Point3D getBotLeftCorner()const;
     void setWidth(float width);
+    void setFont(string font);
+    string getFont()const;
     float getWidth(){return width;};
     void draw(MyWindow* win);
 private:
+    string font;
     Point3D botLeftCorner;
     float width;
 };

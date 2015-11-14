@@ -15,7 +15,7 @@ public:
     void setColor(const Color&);
     const Color & getColor() const;
     virtual void draw(MyWindow*) const = 0;
-    
+    void write(MyWindow*);
 private:
     Color c;
 };

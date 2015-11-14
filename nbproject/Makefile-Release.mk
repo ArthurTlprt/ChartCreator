@@ -51,6 +51,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/Point3D.o \
 	${OBJECTDIR}/Rectangle.o \
 	${OBJECTDIR}/Shape.o \
+	${OBJECTDIR}/Text.o \
 	${OBJECTDIR}/main.o
 
 
@@ -157,6 +158,11 @@ ${OBJECTDIR}/Shape.o: Shape.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Shape.o Shape.cpp
+
+${OBJECTDIR}/Text.o: Text.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Text.o Text.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}

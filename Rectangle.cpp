@@ -10,7 +10,7 @@
 Rectangle::Rectangle(float width, float height) {
     this->width = width;
     this->height = height;
-    cout << "Constuction of a Rectangle (" << width << "," <<  height << ")" << endl;
+    //cout << "Constuction of a Rectangle (" << width << "," <<  height << ")" << endl;
 }
 
 float Rectangle::getArea() {

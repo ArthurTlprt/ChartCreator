@@ -21,6 +21,7 @@
       <itemPath>Point3D.h</itemPath>
       <itemPath>Rectangle.h</itemPath>
       <itemPath>Shape.h</itemPath>
+      <itemPath>Text.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -45,6 +46,7 @@
       <itemPath>Point3D.cpp</itemPath>
       <itemPath>Rectangle.cpp</itemPath>
       <itemPath>Shape.cpp</itemPath>
+      <itemPath>Text.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -143,6 +145,10 @@
       </item>
       <item path="Shape.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Text.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Text.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
@@ -231,6 +237,10 @@
       <item path="Shape.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Shape.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Text.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Text.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>

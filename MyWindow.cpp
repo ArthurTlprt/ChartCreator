@@ -29,7 +29,7 @@ MyWindow::MyWindow(int x, int y, int width, int height) {
     
     /*On initialise la SDL.*/
     SDL_Init(SDL_INIT_VIDEO);
-    SDL_WM_SetCaption("My Window", "My Window");
+    SDL_WM_SetCaption("Chart creator", "Chart creator");
 
     surface = SDL_CreateRGBSurface(SDL_HWSURFACE, width, height, 32, MASQUE_ROUGE, MASQUE_VERT, MASQUE_BLEU, MASQUE_ALPHA);
     sdlWindow = SDL_SetVideoMode(width, height, 32, SDL_ANYFORMAT | SDL_HWSURFACE);
@@ -109,6 +109,11 @@ void MyWindow::setPixel(SDL_Surface *surface, int x, int y, Uint32 pixel) {
             break;
     }
 }
+
+void MyWindow::write(string text, string font, int x, int y) {
+    cout << "MyWindow::write(string text, string font, int x, int y)" << endl;
+}
+
 
 void MyWindow::clearGraph() {
     /*Pour positionner les images*/

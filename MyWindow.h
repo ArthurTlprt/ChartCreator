@@ -5,6 +5,9 @@
 
 class MyDrawable;
 #include "MyDrawable.h"
+#include <string>
+
+using namespace std;
 
 
 class MyWindow {
@@ -30,6 +33,8 @@ public:
     void draw(const MyDrawable&);
     /* dessine un pixel a l'ecran */
     void putPixel(int, int, unsigned char, unsigned char, unsigned char);
+    /* ecrit du texte */
+    void write(string text, string font, int x, int y);
     /* Efface la fenetre courante */
     void clearGraph();
     /* Ferme la fenetre graphique */
