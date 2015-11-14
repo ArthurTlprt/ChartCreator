@@ -54,7 +54,7 @@ void Point3D::incr() {
 }; //incrémente toutes les coordonnées à +1
 
 void Point3D::print() const {
-    cout << "(" << x << "," << y << "," << z << ")"<< endl;
+    //cout << "(" << x << "," << y << "," << z << ")"<< endl;
 }; //affiche un point sous la forme (x,y,z) - couleur
 
 const float & Point3D::getX() const {

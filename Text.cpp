@@ -41,7 +41,7 @@ Text::Text(const Text& orig) {
 }
 
 void Text::draw(MyWindow* win) const {
-    win->write(getText(), getFont(), getTopLeftCorner().getX(), getTopLeftCorner().getY());
+    win->write(getText(), getFont(), getTopLeftCorner().getX(), getTopLeftCorner().getY(), getColor().r, getColor().g, getColor().b);
 }
 
 void Text::print() {

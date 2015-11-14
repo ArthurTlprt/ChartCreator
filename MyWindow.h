@@ -34,7 +34,7 @@ public:
     /* dessine un pixel a l'ecran */
     void putPixel(int, int, unsigned char, unsigned char, unsigned char);
     /* ecrit du texte */
-    void write(string text, string font, int x, int y);
+    void write(string text, string font, int x, int y,  unsigned char, unsigned char, unsigned char);
     /* Efface la fenetre courante */
     void clearGraph();
     /* Ferme la fenetre graphique */

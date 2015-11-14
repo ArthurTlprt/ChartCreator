@@ -7,6 +7,7 @@
 #include <fcntl.h>
 #include <stdlib.h>
 #include <iostream>
+#include <SDL/SDL_ttf.h>
 using namespace std;
 
 /*Suivant l'architecture de la machine, deux manières d'enregistrer des données en mémoire*/
@@ -110,8 +111,38 @@ void MyWindow::setPixel(SDL_Surface *surface, int x, int y, Uint32 pixel) {
     }
 }
 
-void MyWindow::write(string text, string font, int x, int y) {
-    cout << "MyWindow::write(string text, string font, int x, int y)" << endl;
+void MyWindow::write(string text, string font, int x, int y,  unsigned char red, unsigned char green, unsigned char blue) {
+    
+    TTF_Init();
+    SDL_Surface *texte = NULL;
+    TTF_Font *police = NULL;
+    police = TTF_OpenFont("Michroma-webfont.ttf", 22);
+    if(police == NULL){
+        cout << "police == NULL" << endl;
+    }
+    
+    SDL_Rect position;
+    
+    /*position.x = x;
+    position.y = y;*/
+    
+    position.x = 300;
+    position.y = 300;
+    
+    SDL_Color color = {red, green, blue};
+    texte = TTF_RenderText_Blended(police, text.c_str(), color);
+    
+    if(texte == NULL){
+        cout <<"texte == NULL" << endl;
+    }
+    
+    SDL_BlitSurface(texte, NULL, this->surface, &position);
+    
+    cout << "SDL_BlitSurface(texte, NULL, this->surface, &position)" << endl;
+    cout << text.c_str() << endl;
+    
+    TTF_CloseFont(police);
+    TTF_Quit();
 }
 
 
