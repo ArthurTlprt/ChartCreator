@@ -129,15 +129,18 @@ void MyWindow::write(string text, string font, int x, int y,  unsigned char red,
     position.x = 300;
     position.y = 300;
     
-    SDL_Color color = {red, green, blue};
-    texte = TTF_RenderText_Blended(police, text.c_str(), color);
+    //SDL_Color color = {red, green, blue};
+    SDL_Color color = {0, 0, 0};
+    //texte = TTF_RenderText_Blended(police, text.c_str(), color);
+    texte = TTF_RenderText_Blended(police, "hello world", color);
     
     if(texte == NULL){
         cout <<"texte == NULL" << endl;
     }
-    
-    SDL_BlitSurface(texte, NULL, this->surface, &position);
-    
+    while(true){
+        SDL_BlitSurface(texte, NULL, surface, &position);
+        SDL_Flip(surface);
+    }
     cout << "SDL_BlitSurface(texte, NULL, this->surface, &position)" << endl;
     cout << text.c_str() << endl;
     
