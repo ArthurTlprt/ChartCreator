@@ -131,7 +131,6 @@ int main(int argc, char** argv) {
     }
     
     /**/
-    //usr/include/SDL/SDL_ttf.h
     
     
     usleep(30000000);  

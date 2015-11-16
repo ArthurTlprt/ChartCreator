@@ -30,6 +30,7 @@ MyWindow::MyWindow(int x, int y, int width, int height) {
     
     /*On initialise la SDL.*/
     SDL_Init(SDL_INIT_VIDEO);
+    TTF_Init();
     SDL_WM_SetCaption("Chart creator", "Chart creator");
 
     surface = SDL_CreateRGBSurface(SDL_HWSURFACE, width, height, 32, MASQUE_ROUGE, MASQUE_VERT, MASQUE_BLEU, MASQUE_ALPHA);
@@ -40,6 +41,7 @@ MyWindow::~MyWindow() {
     //Free the loaded image
     SDL_FreeSurface(sdlWindow);
     SDL_FreeSurface(surface);
+    TTF_Quit();
     SDL_Quit();
     //cout << "Destructor MyWindow" << endl;
 }
@@ -113,39 +115,30 @@ void MyWindow::setPixel(SDL_Surface *surface, int x, int y, Uint32 pixel) {
 
 void MyWindow::write(string text, string font, int x, int y,  unsigned char red, unsigned char green, unsigned char blue) {
     
-    TTF_Init();
     SDL_Surface *texte = NULL;
     TTF_Font *police = NULL;
-    police = TTF_OpenFont("Michroma-webfont.ttf", 22);
+    police = TTF_OpenFont("Michroma-webfont.ttf", 15);
+    
     if(police == NULL){
         cout << "police == NULL" << endl;
     }
     
     SDL_Rect position;
-    
-    /*position.x = x;
-    position.y = y;*/
-    
-    position.x = 300;
-    position.y = 300;
-    
-    //SDL_Color color = {red, green, blue};
-    SDL_Color color = {0, 0, 0};
-    //texte = TTF_RenderText_Blended(police, text.c_str(), color);
-    texte = TTF_RenderText_Blended(police, "hello world", color);
+    position.x = x +25;
+    position.y = y - 22;
+    SDL_Color color = {red, green, blue};
+    texte = TTF_RenderText_Blended(police, text.c_str(), color);
     
     if(texte == NULL){
         cout <<"texte == NULL" << endl;
     }
-    while(true){
-        SDL_BlitSurface(texte, NULL, surface, &position);
-        SDL_Flip(surface);
-    }
-    cout << "SDL_BlitSurface(texte, NULL, this->surface, &position)" << endl;
-    cout << text.c_str() << endl;
+    
+    SDL_UnlockSurface(surface);
+    SDL_BlitSurface(texte, NULL, surface, &position);
+    SDL_Flip(surface);
+    SDL_LockSurface(surface);
     
     TTF_CloseFont(police);
-    TTF_Quit();
 }
 
 
