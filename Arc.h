@@ -19,7 +19,7 @@ public:
     Arc(const Arc& orig);
     virtual ~Arc();
     void draw(MyWindow*) const;
-    float getArea();
+    float getArea(){return 0;};
     float getRadius()const;
     float getStartAngle()const;
     float getEndAngle()const;

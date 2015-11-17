@@ -1,8 +1,8 @@
-build/Debug/GNU-Linux-x86/PieChart1.o: PieChart1.cpp PieChart1.h \
+build/Debug/GNU-Linux-x86/BarGraph1.o: BarGraph1.cpp BarGraph1.h \
  Point3D.h Chart.h Data1.h Color.h MyWindow.h MyDrawable.h DataParser.h \
- Arc.h Shape.h Line.h Disc.h
+ Rectangle.h Shape.h
 
-PieChart1.h:
+BarGraph1.h:
 
 Point3D.h:
 
@@ -18,10 +18,6 @@ MyDrawable.h:
 
 DataParser.h:
 
-Arc.h:
+Rectangle.h:
 
 Shape.h:
-
-Line.h:
-
-Disc.h:

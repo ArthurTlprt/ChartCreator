@@ -18,9 +18,6 @@
 class Line: public Shape {
 public:
     Line(Point3D pt1, Point3D pt2);
-    //Line(const Line& orig);
-    void GetPt1(Point3D pt1);
-    void GetPt2(Point3D pt2);
     void draw(MyWindow*) const;
     float getArea();
 

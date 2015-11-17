@@ -46,74 +46,65 @@ DataParser::DataParser(string fileName) {
         string ligne;
         while(getline(f, ligne))  
         {
-            Data1* data = new Data1(Color(0, 0, 0));
-            // get name
-            int i = 0, j = 0, k = 0;
-            string name;
-            Color color;
-            while(ligne[i] != 34){
-                name += ligne[i];
-                i++;
-            }
-            data->SetName(name); 
-           
-            //get prct
-            j = i+1;
-            string prct;
-            while(ligne[j] != 34){
-                if(ligne[j] == 44){
-                    float num;
-                    stringToFloat(prct, num);
-                    data->addPrct(num);
-                    
-                    //cout << num << endl;
-                    prct = "";
-                }else{
-                    prct += ligne[j];
+                Data1* data = new Data1(Color(0, 0, 0));
+                // get name
+                int i = 0, j = 0, k = 0;
+                string name;
+                Color color;
+                while(ligne[i] != 34){
+                        name += ligne[i];
+                        i++;
                 }
-                j++;
-            }
+                data->SetName(name); 
 
-            float num;
-            stringToFloat(prct, num);
-            data->addPrct(num);
+                //get prct
+                j = i+1;
+                string prct;
+                while(ligne[j] != 34){
+                        if(ligne[j] == 44){
+                                float num;
+                                stringToFloat(prct, num);
+                                data->addPrct(num);
 
-            //cout << num << endl;
-                   
-            //get color
-            j++;        
-            int colorInt[3];
-            int z=0;
-            string str;
-                    
-            while(ligne[j] != 34){
-                if(ligne[j] == 44){
-                    stringToInt(str, colorInt[z]);
-                    z++;
-                    str = "";
-                }else{
-                    str += ligne[j];
+                            prct = "";
+                    }else{
+                        prct += ligne[j];
+                    }
+                    j++;
                 }
-                j++;
-            }
-            stringToInt(str, colorInt[2]);
-            
-            
-            /*cout << colorInt[0] << endl;
-            cout << colorInt[1] << endl;
-            cout << colorInt[2] << endl;*/
-            
-            data->SetColor(Color(colorInt[0], colorInt[1], colorInt[2]));
-            
-            chartData.add(data);
+
+                float num;
+                stringToFloat(prct, num);
+                data->addPrct(num);
+
+                //get color
+                j++;        
+                int colorInt[3];
+                int z=0;
+                string str;
+
+                while(ligne[j] != 34){
+                    if(ligne[j] == 44){
+                            stringToInt(str, colorInt[z]);
+                            z++;
+                            str = "";
+                    }else{
+                            str += ligne[j];
+                    }
+                    j++;
+                }
+                stringToInt(str, colorInt[2]);
+
+
+                data->SetColor(Color(colorInt[0], colorInt[1], colorInt[2]));
+
+                chartData.add(data);
         }
         
     }
     else cout << "unable to open the file" << endl;
 }
 
-/*DataParser::DataParser(const DataParser& orig) {
-}*/
 
 DataParser::~DataParser() {
 }

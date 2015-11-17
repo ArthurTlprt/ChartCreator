@@ -113,19 +113,19 @@ void MyWindow::setPixel(SDL_Surface *surface, int x, int y, Uint32 pixel) {
     }
 }
 
-void MyWindow::write(string text, string font, int x, int y,  unsigned char red, unsigned char green, unsigned char blue) {
+void MyWindow::write(string text, string font, int fontSize, int x, int y,  unsigned char red, unsigned char green, unsigned char blue) {
     
     SDL_Surface *texte = NULL;
     TTF_Font *police = NULL;
-    police = TTF_OpenFont("Michroma-webfont.ttf", 15);
+    police = TTF_OpenFont(font.c_str(), fontSize);
     
     if(police == NULL){
         cout << "police == NULL" << endl;
     }
     
     SDL_Rect position;
-    position.x = x +25;
-    position.y = y - 22;
+    position.x = x;
+    position.y = y;
     SDL_Color color = {red, green, blue};
     texte = TTF_RenderText_Blended(police, text.c_str(), color);
     

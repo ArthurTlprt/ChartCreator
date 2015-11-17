@@ -21,10 +21,6 @@ Arc::Arc(const Arc& orig) {
 Arc::~Arc() {
 }
 
-float Arc::getArea(){
-    return -1;
-}
-
 
 float Arc::getRadius()const {
     return this->radius;

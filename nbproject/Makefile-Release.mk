@@ -47,7 +47,6 @@ OBJECTFILES= \
 	${OBJECTDIR}/MyDrawable.o \
 	${OBJECTDIR}/MyWindow.o \
 	${OBJECTDIR}/PieChart1.o \
-	${OBJECTDIR}/PieChart2.o \
 	${OBJECTDIR}/Point3D.o \
 	${OBJECTDIR}/Rectangle.o \
 	${OBJECTDIR}/Shape.o \
@@ -138,11 +137,6 @@ ${OBJECTDIR}/PieChart1.o: PieChart1.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/PieChart1.o PieChart1.cpp
-
-${OBJECTDIR}/PieChart2.o: PieChart2.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/PieChart2.o PieChart2.cpp
 
 ${OBJECTDIR}/Point3D.o: Point3D.cpp 
 	${MKDIR} -p ${OBJECTDIR}

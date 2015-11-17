@@ -7,10 +7,11 @@
 
 #include "Text.h"
 
-Text::Text(string text, string font, Point3D topLeftCorner) {
+Text::Text(string text, string font, int fontSize, Point3D topLeftCorner) {
     setText(text.c_str());
     setFont(font.c_str());
     setTopLeftCorner(topLeftCorner);
+    setFontSize(fontSize);
 }
 
 void Text::setTopLeftCorner(Point3D topLeftCorner) {
@@ -29,6 +30,10 @@ string Text::getFont() const {
     return font;
 }
 
+void Text::setFontSize(int fontSize) {
+    this->fontSize = fontSize;
+}
+
 void Text::setText(string text) {
     this->text = text;
 }
@@ -41,7 +46,7 @@ Text::Text(const Text& orig) {
 }
 
 void Text::draw(MyWindow* win) const {
-    win->write(getText(), getFont(), getTopLeftCorner().getX(), getTopLeftCorner().getY(), getColor().r, getColor().g, getColor().b);
+    win->write(getText(), getFont(), getFontSize(),  getTopLeftCorner().getX() +25, getTopLeftCorner().getY() - 22, getColor().r, getColor().g, getColor().b);
 }
 
 void Text::print() {

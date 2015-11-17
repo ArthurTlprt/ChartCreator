@@ -17,7 +17,6 @@
       <itemPath>MyDrawable.h</itemPath>
       <itemPath>MyWindow.h</itemPath>
       <itemPath>PieChart1.h</itemPath>
-      <itemPath>PieChart2.h</itemPath>
       <itemPath>Point3D.h</itemPath>
       <itemPath>Rectangle.h</itemPath>
       <itemPath>Shape.h</itemPath>
@@ -42,7 +41,6 @@
       <itemPath>MyDrawable.cpp</itemPath>
       <itemPath>MyWindow.cpp</itemPath>
       <itemPath>PieChart1.cpp</itemPath>
-      <itemPath>PieChart2.cpp</itemPath>
       <itemPath>Point3D.cpp</itemPath>
       <itemPath>Rectangle.cpp</itemPath>
       <itemPath>Shape.cpp</itemPath>
@@ -128,10 +126,6 @@
       <item path="PieChart1.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="PieChart1.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="PieChart2.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="PieChart2.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Point3D.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -221,10 +215,6 @@
       <item path="PieChart1.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="PieChart1.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="PieChart2.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="PieChart2.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Point3D.cpp" ex="false" tool="1" flavor2="0">
       </item>

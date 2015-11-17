@@ -37,22 +37,13 @@ Point3D LineGraph::getBotLeftCorner() const {
     return botLeftCorner;
 }
 
-/*
-LineGraph::LineGraph(const LineGraph& orig) {
-}*/
-
 
 void LineGraph::draw(MyWindow* win) {
-    
-    cout << "largeur " << width + botLeftCorner.getX() << endl;
-    cout << "hauteur " << height + botLeftCorner.getY() << endl;
     
     int n = chartData.size();   // n = nb color
     int len = chartData.getDataById(0)->getSize(); // len = nb point
     float width = this->width/len;
     
-    cout << "n: " << n << endl;
-    cout << "l : " << len << endl;
     
     for(int i=0; i < n; ++i){
         Data1* data = chartData.getDataById(i);
@@ -62,16 +53,9 @@ void LineGraph::draw(MyWindow* win) {
             
             Point3D pt2( botLeftCorner.getX() + (j+1)*width, botLeftCorner.getY() - data->getPrctById(j+1)*(this->getHeight()), 0);
             
-            pt1.print();
-            pt2.print();
-            
             Line line(pt1, pt2);
             line.setColor(data->GetColor().r, data->GetColor().g, data->GetColor().b);
             win->draw(line);
-            
-            /*Line line1(Point3D(200, 200, 0), Point3D(500, 500+((j+1)*10*(i+1)), 0));
-            line1.setColor(66, 9, 19);
-            win->draw(line1);*/
         }
     }
 }

@@ -16,7 +16,7 @@ using namespace std;
 
 class Text: public MyDrawable {
 public:
-    Text(string text, string font, Point3D topLeftCorner);
+    Text(string text, string font, int fontSize, Point3D topLeftCorner);
     Text(const Text& orig);
     virtual ~Text();
 
@@ -25,6 +25,8 @@ public:
     Point3D getTopLeftCorner() const;
     void setFont(string font);
     string getFont() const;
+    void setFontSize(int fontSize);
+    int getFontSize()const{return fontSize;};
     void setText(string text);
     string getText() const;
     void print();
@@ -32,6 +34,7 @@ private:
     string text;
     string font;
     Point3D topLeftCorner;
+    int fontSize;
 };
 
 #endif	/* TEXT_H */

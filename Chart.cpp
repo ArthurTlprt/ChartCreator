@@ -11,19 +11,19 @@
 using namespace std;
 
 Chart::Chart() {
-    //Data1* data0 = new Data1(75, Color(100, 100, 100));
-    //tableau.push_back(data0);
 }
 
 Chart::Chart(const Chart& orig) {
 }
 
 Chart::~Chart() {
+    for(unsigned int i = 0; i < size(); ++i){
+        delete getDataById(i);
+    }
 }
 
 void Chart::add(Data1 * data) {
     tableau.push_back(data);
-    //cout << "push_back some data" << endl;
 }
 
 Data1* Chart::getDataById(int id) {

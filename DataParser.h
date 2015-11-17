@@ -22,7 +22,6 @@ using namespace std;
 class DataParser {
 public:
     DataParser(string fileName);
-    //DataParser(const DataParser& orig);
     virtual ~DataParser();
 private:
     bool stringToFloat(string str, float &f);

@@ -123,9 +123,9 @@ int main(int argc, char** argv) {
     
     {
         string fileName = "graph0.txt";
-        string font = "test.ttf";
+        string font = "Michroma-webfont.ttf";
         
-        Caption caption(Point3D(1000, 600, 0),20, fileName, font);
+        Caption caption(Point3D(1000, 600, 0),20, fileName, font, 17);
         
         caption.draw(win);
     }

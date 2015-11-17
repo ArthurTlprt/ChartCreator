@@ -44,11 +44,10 @@ Point3D BarGraph1::GetBotLeftCorner() const {
 void BarGraph1::draw(MyWindow* win) {
     
     int n = chartData.size();
-    //int len = tableau[0]->getSize();
     int len = chartData.getDataById(0)->getSize();
     
      float width, height;
-    // type : true = vertical, false = horizontal
+    
     if(this->type == true){
         width = this->width/(n*len);    //define width of the bar
         
@@ -56,7 +55,6 @@ void BarGraph1::draw(MyWindow* win) {
             for(int i = 0; i < n; i++){
 
                 Data1* data = chartData.getDataById(i); //data by data, bar by bar
-                data->print();  //debug
                 Rectangle rect( width,  (this->height)*(data->getPrctById(j)) );    // i define a bar
                 rect.setColor( data->GetColor().r , data->GetColor().g, data->GetColor().b );
                 
@@ -69,7 +67,6 @@ void BarGraph1::draw(MyWindow* win) {
     }else{
         
         height = this->height/(n*len);
-        //width = this->width/(chartData.size());
         
         for(int j = 0; j < len; j++){
             float prevWidth = 0;
@@ -79,10 +76,7 @@ void BarGraph1::draw(MyWindow* win) {
                 prevWidth += (this->width)*(data->getPrctById(j));
                 rect.setColor( data->GetColor().r , data->GetColor().g, data->GetColor().b );
                 
-                //rect.setBotLeftCorner(Point3D( (this->GetBotLeftCorner().getX()) + prevWidth - (this->width)*(data->getPrctById(j)), this->GetBotLeftCorner().getY()+((height)*(2*(j+1))), 0));
                 rect.setBotLeftCorner(Point3D( this->GetBotLeftCorner().getX() + prevWidth - (this->width)*(data->getPrctById(j)), this->GetBotLeftCorner().getY() +(height)*(2*(j)), 0));
-                cout << "1 : " << this->GetBotLeftCorner().getX() + prevWidth - (this->width)*(data->getPrctById(j)) << endl;
-                cout << "2 : " << this->GetBotLeftCorner().getY() +(height)*(2*(j)) << endl;
                 win->draw(rect);
             }
         }

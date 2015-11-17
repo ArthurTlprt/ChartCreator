@@ -17,26 +17,18 @@ float Line::getArea() {
     return 0.0;
 }
 
-/*
-Line::Line(const Line& orig) {
-}*/
-
 void Line::draw(MyWindow* win) const {
     float x1 = pt1.getX();
     float y1 = pt1.getY();
     float x2 = pt2.getX();
     float y2 = pt2.getY();
     
-    //win->putPixel(X, Y, getColor().r, getColor().g, getColor().b);  
-    
     
     int delta_x(x2 - x1);
-    // if x1 == x2, then it does not matter what we set here
     signed char const ix((delta_x > 0) - (delta_x < 0));
     delta_x = std::abs(delta_x) << 1;
  
     int delta_y(y2 - y1);
-    // if y1 == y2, then it does not matter what we set here
     signed char const iy((delta_y > 0) - (delta_y < 0));
     delta_y = std::abs(delta_y) << 1;
  
@@ -44,7 +36,6 @@ void Line::draw(MyWindow* win) const {
  
     if (delta_x >= delta_y)
     {
-        // error may go below zero
         int error(delta_y - (delta_x >> 1));
  
         while (x1 != x2)
@@ -54,7 +45,6 @@ void Line::draw(MyWindow* win) const {
                 error -= delta_x;
                 y1 += iy;
             }
-            // else do nothing
  
             error += delta_y;
             x1 += ix;
@@ -64,7 +54,6 @@ void Line::draw(MyWindow* win) const {
     }
     else
     {
-        // error may go below zero
         int error(delta_x - (delta_y >> 1));
  
         while (y1 != y2)
@@ -74,8 +63,6 @@ void Line::draw(MyWindow* win) const {
                 error -= delta_y;
                 x1 += ix;
             }
-            // else do nothing
- 
             error += delta_x;
             y1 += iy;
  
