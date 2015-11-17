@@ -1,8 +1,8 @@
 /* 
  * File:   main.cpp
  * Author: Arthur Talpaert
- *  p60132
- *  arthur.talpaert@isen-lille.fr
+ *  repository: https://github.com/ArthurTlprt/ChartCreator
+ *  mail: arthur.talpaert@isen-lille.fr
  * Created on 10 octobre 2015, 15:23
  */
 
